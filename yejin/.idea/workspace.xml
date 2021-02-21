@@ -19,27 +19,63 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d8119cd-0f78-4935-98e0-2b15ac59412c" name="Default Changelist" comment="add gugudan folder" />
+    <list default="true" id="1d8119cd-0f78-4935-98e0-2b15ac59412c" name="Default Changelist" comment="add gugudan folder">
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/components/TodoController.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/components/TodoHeader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-gugudan/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuex-test/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuex-test/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuex-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuex-test/src/App.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1nEyIPB9pioOlEyPnovoPgSwrVd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -62,6 +98,9 @@
       <option name="presentableId" value="Default" />
       <updated>1610969463664</updated>
       <workItem from="1610969465229" duration="748000" />
+      <workItem from="1612940156030" duration="1622000" />
+      <workItem from="1613579704454" duration="938000" />
+      <workItem from="1613921799907" duration="5601000" />
     </task>
     <task id="LOCAL-00001" summary="add gugudan folder">
       <created>1610970013128</created>
@@ -93,8 +132,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add gugudan folder" />
     <option name="LAST_COMMIT_MESSAGE" value="add gugudan folder" />
   </component>

@@ -2,6 +2,10 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input type="text" class="input" placeholder="Enter" v-model="newTodoItem">
+    <button clas="button">
+      <span class="blind">ADD</span>
+    </button>
   </div>
 </template>
 
