@@ -3,7 +3,7 @@
     <div class="nav">
        <a href="">대시보드</a>
        <div class="profile_box" @click="DropDown">
-         <p><i class="fas fa-caret-down"></i> Admin</p>
+         <p><i class="fas fa-caret-down"></i> Admin </p>
          <ul class="menu">
            <li>프로필</li>
            <li>설정</li>
