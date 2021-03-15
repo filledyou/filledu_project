@@ -14,14 +14,29 @@
     <!-- end of nav-bar -->
 
     <div class="box">
+      <!-- 타이틀 부분-->
       <div class="title_section">
         <img src="@/assets/school.png" alt="school_icon"> 
         <p class="title">대학 리스트</p>
       </div>
+
       <hr class="divider">
+
+      <!-- 검색창 부분 -->
+      <div class="input_section">
+        <input class="searchInput" type="text">
+        <button class="searchButton">검색</button>
+      </div>
+
+      <!-- 필터부분 -->
+      <div class="filter_section">
+          <img src="@/assets/dropdown.png" alt="#">
+          <p>필터</p>
+        
+      </div>
+      
       
     </div>
-
   </div>
 </template>
 
@@ -73,6 +88,7 @@ ul, ol, li{
   display: flex;
   /* 양쪽으로 나눠주는 역할 */
   justify-content: space-between;
+  box-shadow: 0px 11px 37px -19px rgba(100, 100, 100, 0.73);
 }
 
 /* 대시보드 왼쪽 상단 로고 */
@@ -160,7 +176,7 @@ ul, ol, li{
 }
 
 /* 둥근 테두리 */
-.menu >li:last-child{
+.menu > li:last-child{
   border-radius: 0 0 10px 10px;
 }
 
@@ -174,13 +190,13 @@ ul, ol, li{
   margin: 0 auto;
 
   /* position */
-  margin-top: 15px;
+  margin-top: 20px;
   
 
   width: 90%;
   height: 835px;
 
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: rgb(242, 242, 242);
 }
 
@@ -188,12 +204,12 @@ ul, ol, li{
   justify-items: left;
 
   /* position */
-  margin-left: 25px;
+  margin-left: 45px;
   margin-top: 10px;
 
   /* size */
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 
 .box > .title_section{
@@ -213,7 +229,76 @@ ul, ol, li{
 
 /* 수평선 */
 hr{
-  width: 95%;
-  border-top: 0.1px solid gr;
+  /* position */
+  margin-top: -15px;
+
+  width: 98%;
+  border-top: 0.1px solid rgb(187, 187, 187);
+}
+
+.input_section{
+  display: flex;
+
+  /* position */
+  margin-top: 20px;
+}
+
+.input_section > .searchInput{
+  width: 90%;
+  height: 50px;
+
+  /* position */
+  margin-left: 25px;
+  
+  background-color: rgb(208, 206, 206);
+  border-radius: 10px;
+  border: none;
+}
+
+.input_section > .searchButton{
+  width: 8.5%;
+  height: 50px;
+
+  /* position */
+  margin-left: 10px;
+  margin-right: 15px;
+
+  background-color: rgb(169, 209, 142);
+  border-radius: 5px;
+  border: none;
+
+  cursor: pointer;
+  color: white;
+
+  transition: 0.1s;
+}
+
+.searchButton:hover{
+  background-color: rgb(116, 167, 69);
+  transform: scale(1.05);
+}
+
+/* 필터 영역 */
+.filter_section{
+  width: 100%;
+
+  /* position */
+  margin-top: 15px;
+
+  background-color: rgb(231, 230, 230);
+}
+
+.filter_section > img{
+  width: 30px;
+
+  /* position */
+  margin-left: 45%;
+}
+
+.filter_section > p{
+  display: inline;
+
+  /* position */
+
 }
 </style>  
