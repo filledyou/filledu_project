@@ -1,5 +1,9 @@
 <template>
   <div class="container">
+
+    <div class="alert">
+      <p>로그인 정보가 올바르지 않습니다!</p>
+    </div>
     <div class="login-box">
       <div class="left-box">
         <img src="@/assets/logo.png" alt="">
@@ -19,6 +23,7 @@
 <script>
 // @ is an alias to /src
 import axios from 'axios'
+import $ from 'jquery'
 
 export default {
   name: 'Home',
@@ -40,6 +45,13 @@ export default {
 
           }
           else{
+            //alert 애니메이션
+            $('.alert').slideDown(500)
+            setTimeout( function(){
+               $('.alert').stop().slideUp(500)
+            }, 1000) 
+            
+
             console.log("값이 success 가 아니에요")
           } //reject가 else 밖으로 빠져있는거 맞음 (서버에서 오류가 나버리면 reject 호출)
           reject(response.data) //근데 밑에서 catch를 써버리면 reject가 쓸모없지 않음?
@@ -64,6 +76,24 @@ export default {
 
     text-align: center;
   }
+
+  .alert{
+    display: none;
+    position: fixed;
+    
+    background-color: rgb(245, 157, 157);
+    border: 1px solid rgb(190, 79, 79);
+    border-radius: 10px;
+
+    width: 400px;
+    height: 55px;
+
+    /* position */
+    margin-top: 10px;
+    margin-left: 40%;
+  }
+
+  
 
   .login-box{
     display: flex;

@@ -11,6 +11,17 @@
          </ul>
        </div>
     </div>
+    <!-- end of nav-bar -->
+
+    <div class="box">
+      <div class="title_section">
+        <img src="@/assets/school.png" alt="school_icon"> 
+        <p class="title">대학 리스트</p>
+      </div>
+      <hr class="divider">
+      
+    </div>
+
   </div>
 </template>
 
@@ -157,4 +168,52 @@ ul, ol, li{
   background-color: rgb(83, 163, 216);
 }
 
+
+/* Container */
+.box{
+  margin: 0 auto;
+
+  /* position */
+  margin-top: 15px;
+  
+
+  width: 90%;
+  height: 835px;
+
+  border-radius: 10px;
+  background-color: rgb(242, 242, 242);
+}
+
+.box > .title_section > img{
+  justify-items: left;
+
+  /* position */
+  margin-left: 25px;
+  margin-top: 10px;
+
+  /* size */
+  width: 70px;
+  height: 70px;
+}
+
+.box > .title_section{
+  /* 방향: 가로 */
+  display: flex;
+}
+
+
+.title_section > .title{
+  font-size: 25px;
+  font-family: 'Do Hyeon', sans-serif;
+
+  /* position */
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+/* 수평선 */
+hr{
+  width: 95%;
+  border-top: 0.1px solid gr;
+}
 </style>  
