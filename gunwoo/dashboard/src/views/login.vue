@@ -64,16 +64,15 @@ export default {
 
     }
   },
-  mounted() {
-      document.body.style.background= "#fff2cc"; /* (rgb(255, 242, 204);) */
-    }
+  // mounted() {
+  //     document.body.style.background= "#fff2cc"; /* (rgb(255, 242, 204);) */
+  //   }
 }
 </script>
 
 <style>
   .container{
     color: black;
-
     text-align: center;
   }
 
