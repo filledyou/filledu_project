@@ -1,91 +1,98 @@
 <template>
   <div>
+      <nav-bar/>
+      
+    <v-container>
+        <!-- Grid 가운데 정렬 with v-container -->
+        <v-row  align="center"
+                justify="center">
 
-    <div class="nav" >
-        <div class="float-right mt-1 mr-2 ">
-            <v-menu offset-y >
-                <template v-slot:activator="{ on, attrs }">
-                    
-                    <v-btn
-                        class="pt-5"
-                        color="primary"
-                        v-bind="attrs"
-                        v-on="on"
-
-                        width="120px"
-                        height="50px"
-                    >
-                    <p><v-icon>fas fa-caret-down</v-icon>  Admin</p>
-                    
-                    </v-btn>
-                    
-                </template>
-                <v-list>
-                    <v-list-item>프로필</v-list-item>
-                    <v-list-item>설정</v-list-item>
-                    <v-list-item>로그아웃</v-list-item>
-                </v-list>
-            </v-menu>
-        </div>
-        <!-- END OF FLOAT RIGHT -->
-    </div>
-        
-
-
-    <div class="YS">
-        <v-card class=" mt-5"
-                elevation="3" 
-                outlined 
-                width="85%" 
-                justify="center"
-                > 
-
-                <div class="SEARCH-SECTION d-flex">
-                    <v-text-field
-                            flat
-                            hide-details
-                            label="학교 이름을 검색하세요"
-                            prepend-inner-icon="mdi-magnify"
-                            solo
-                    >
-                    <!-- FIELD TEXT SOMETHING ON HERE -->
-                    </v-text-field>
-
-
-                    <v-btn  class="searchBtn ml-3"
-                            color="error"
-                            dark
-                            large
-                            
-                    >
-                            검색
-                    </v-btn>
-                </div>
             
-        </v-card>
-    </div> 
+
+            <v-card class="mt-5"
+                    elevation="3" 
+                    outlined 
+                    width="85%" 
+                    justify="center"
+                    > 
+                        
+                        <!-- <v-img  src="@/assets/school.png" width="50px"></v-img>  --> <v-card-title >대학 리스트</v-card-title>
+                    
+                    <div class="SEARCH-SECTION d-flex">
+                        <v-text-field
+                                outlined
+                                flat
+                                hide-details
+                                label="학교 이름을 검색하세요"
+                                prepend-inner-icon="mdi-magnify"
+                                solo     
+                        >
+                            <!-- FIELD TEXT SOMETHING ON HERE -->
+                        </v-text-field>
+
+
+                        <v-btn  class="searchBtn ml-1 mr-1 | pa-7"
+                                color="error"
+                                dark
+                                large       
+                        >
+                                검색
+                        </v-btn>
+                    </div>
+                    <!-- ######## -->
+                    <!-- TABLES HERE -->
+                    
+                    <!-- https://vuetifyjs.com/en/components/data-tables/#external-pagination -->
+                    <v-data-table
+                    :headers="headers"
+                    :items="desserts"
+                    :page.sync="page"
+                    :items-per-page="itemsPerPage"
+                    hide-default-footer
+                    class="elevation-1"
+                    @page-count="pageCount = $event"
+                    ></v-data-table>
+                    <div class="text-center pt-2">
+                    <v-pagination
+                        v-model="page"
+                        :length="pageCount"
+                    ></v-pagination>
+                    </div>
+
+
+                    
+
+            </v-card>
+        </v-row>
+    </v-container>
 
   </div>
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
+    data(){
+        return{
 
+        }
+    },
+    methods:{
+
+    },
+    
+    mounted(){
+        //App.vue V-app
+        $(".v-application").css("background-color","#fff");
+    }
 }
 </script>
 
 <style>
-.nav{
-  width: 100%;
-  height: 60px;
-
-  background-color: rgb(0, 176, 240);
-}
 
 
-
-.YS{
-    margin: 0 auto;
-}
 
 </style>
+
+//참고
+// https://www.javaer101.com/ko/article/2234479.html - 그리드와 가운데 정렬

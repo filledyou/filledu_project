@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+
+  <div class="login-container">
 
     <div class="alert">
       <p>로그인 정보가 올바르지 않습니다!</p>
@@ -9,7 +10,7 @@
         <img src="@/assets/logo.png" alt="">
       </div>
       <div class="right-box">
-        <p><i class="fas fa-key"></i> 로그인</p>
+        <p class="login-title"><i class="fas fa-key"></i> 로그인</p>
         <input class="id" type="text" placeholder=" 아이디" v-model="UserID">
         <input class="pw" type="password" placeholder=" 비밀번호" v-model="UserPW">
         <a class="create_account" href="">계정 만들기</a>
@@ -18,6 +19,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -65,15 +67,29 @@ export default {
     }
   },
   mounted() {
-      document.body.style.background= "#fff2cc"; /* (rgb(255, 242, 204);) */
+      $(".v-application").css("background-color","#fff2cc");
+      // document.body.style.background= "#fff2cc";  (rgb(255, 242, 204);) 
     }
 }
 </script>
 
-<style>
-  .container{
+<style >
+ 
+  /* 그냥 .container일시, Vuetify <conatiner>의 css속성을 적용시켜버려서 조심해야됨 (다른 페이지에 container태그 쓴거까지 영향 미침)*/
+  .login-container{
     color: black;
     text-align: center;
+
+    /* 배경색 전체가 적용되기 위해서 중요함 */
+    /* 참고: https://forum.vuejs.org/t/how-to-change-background-color-in-vuetify/37905/3 */
+    height: 100vh;
+    
+    background-color: #fff2cc;
+  }
+
+  .login-title{
+    padding-top: 10px;
+    padding-bottom: 45px;
   }
 
   .alert{

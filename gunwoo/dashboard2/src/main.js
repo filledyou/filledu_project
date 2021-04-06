@@ -4,7 +4,10 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 
+import Nav from './components/navbar.vue'
+
 Vue.config.productionTip = false
+Vue.component('nav-bar', Nav)
 
 new Vue({
   router,
