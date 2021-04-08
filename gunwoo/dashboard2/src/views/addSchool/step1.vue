@@ -53,10 +53,8 @@
                             <!-- INPUTS THINGS HERE -->
                             <p class="">이름 | Name</p>
                             <v-text-field 
-                                    
+                                    v-model="step1.schoolName"
                                     class="wd-90"
-                                    v-model="Name"
-                                    
                                     filled
                                     label=""
                                     clearable
@@ -65,7 +63,8 @@
                         
                              <p class="">지역 | Address</p>
                         <div class="flex">
-                            <v-text-field 
+                            <v-text-field
+                                    v-model="step1.schoolAddress" 
                                     class="wd-10"
                                     filled
                                     disabled
@@ -99,10 +98,10 @@
                         <!-- 나중에 이메일 valdation 도 찾아보기 -->
                        
                         <v-text-field
+                            v-model="step1.schoolEmail"
                             style="margin-left: 20px"
                             filled
-                            class="wd-20"
-                            v-model="email" 
+                            class="wd-20" 
                             placeholder="example@school.com"
                             label="E-mail"
                             
@@ -196,6 +195,12 @@ import $ from 'jquery'
 export default {
     data(){
         return{
+
+            step1:{
+                schoolName: '',
+                schoolAddress: '',
+                schoolEmail:'',
+            }
 
         }
     },
