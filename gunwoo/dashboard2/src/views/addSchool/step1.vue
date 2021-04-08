@@ -90,7 +90,7 @@
                     <div class="flex">
                         <v-select
                             class="wd-20"
-                            :items="items"
+                            :items="enrollList"
                             filled
                             label="Filled style"
                         ></v-select>
@@ -169,14 +169,38 @@
                         >
                             이전
                             </v-btn>
-                        <v-btn
+
+                        <!-- 다이얼로그를 뺴고 만들어야 하나? -->
+                        <v-dialog
+                            v-model="showFillDialog"
+                        >
+                            <template v-slot:activator="{ on }" >
+                           <v-btn
+                            @click="Next"
                             class="ma-2"
-                            color="success"
+                            color="success" 
                             width="80px"
                             height="50px"
-                        >
-                            다음
-                        </v-btn>
+                            v-on= on
+                            >
+                                다음
+                            </v-btn>
+                        </template>
+                            
+                           <v-alert 
+                            prominent
+                            type="error"
+                            >
+                            <v-row align="center">
+                                <v-col class="grow">
+                                채워지지 않은 필드가 있습니다.
+                                </v-col>
+                                <v-col class="shrink">
+                                <v-btn @click="showFillDialog = false"> 확인</v-btn>    
+                                </v-col>
+                            </v-row>
+                            </v-alert>
+                        </v-dialog>
                         
 
                         </div>
@@ -195,6 +219,11 @@ import $ from 'jquery'
 export default {
     data(){
         return{
+            allTextFilled: true,
+            showFillDialog: false,
+
+            enrollList: ['test1', 'test2'],
+            dialog:false,
 
             step1:{
                 schoolName: '',
@@ -205,6 +234,19 @@ export default {
         }
     },
     methods:{
+        Next(){
+            if(this.allTextFilled == false){
+                this.showFillDialog = true;
+                console.log("쇼우 파일 다이얼로그: " +  this.showFillDialog)
+            }
+             
+            
+
+            console.log("학교이름: " + this.step1.schoolName);
+            console.log("학교주소: " + this.step1.schoolAddress);
+            console.log("학교이메일: " + this.step1.schoolEmail);
+            console.log("추가입력: " + this.dialog);
+        }
 
     },
     

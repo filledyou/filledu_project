@@ -5,6 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+
+    completed:{
+      step1: false,
+      step2: false,
+      step3: false,
+    }
+
   },
   mutations: {
   },
