@@ -14,6 +14,13 @@ export default new Vuex.Store({
 
   },
   mutations: {
+    firstStepCompleted(state, payload){
+      state.completed.step1 = true;
+      
+      console.log("mutation에서 받은 payload:")
+      console.log(payload)
+      console.log(state.completed.step1)
+    }
   },
   actions: {
   },

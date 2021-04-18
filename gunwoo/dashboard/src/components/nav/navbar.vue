@@ -17,18 +17,19 @@ import $ from 'jquery'
 export default {
     data(){
         return{
-            
+            IsMenuDropDown: false
         }
     },
     methods:{
     DropDown(){
-      if(this.IsMenuDropDown == true){
+      console.log("클릭됬는데")
+      if(this.IsMenuDropDown == false){
         $('.menu > li').stop().slideDown(300);
-        this.IsMenuDropDown = false
+        this.IsMenuDropDown = true
       }
       else{
         $('.menu > li').stop().slideUp(300);
-        this.IsMenuDropDown = true
+        this.IsMenuDropDown = false
       }   
     },
     ActiveFilter(){

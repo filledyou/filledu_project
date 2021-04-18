@@ -1,14 +1,37 @@
 <template>
-    <div class="addSchool">
+<div>
+  <nav-bar/>
 
-    <nav-bar/>
-    <!-- start of box -->
-    <div class="box">
-        <div class="title">학교 추가하기</div>
-    </div>
+  <!-- 메인박스 -->
+  <div class="box">
+    <div class="title">학교 추가하기</div>
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+          <!-- SMTH WILL BE HERE -->
+          <!-- /////////// -->
+      </div>
+        <!-- 전체 (1행 / 프리뷰) 나누기용 flex -->
+        <div class="flex">
+          <div class="row-1 flex">
+            section1
+          </div>
+         
+            
+          <div class="preview">
+            preview
+          </div>
+        </div>
+        <!-- 전체 flex 끝 -->
 
-    </div>
+       <div class="row-2 flex">
+            section2
+          </div>
 
+        <button>취소</button>
+        <button>다음</button>
+  </div>
+  <!-- 메인 박스 끝 -->
+</div>
 </template>
 
 <script>
@@ -22,57 +45,4 @@ export default {
 }
 </script>
 
-<style>
-.nav{
-  width: 100%;
-  height: 70px;
-
-  background-color: rgb(0, 176, 240);
-
-  /* 가로 */
-  display: flex;
-  /* 양쪽으로 나눠주는 역할 */
-  justify-content: space-between;
-  box-shadow: 0px 11px 37px -19px rgba(100, 100, 100, 0.73);
-}
-
-/* 대시보드 왼쪽 상단 로고 */
-.nav > a{
-  font-family: 'Do Hyeon', sans-serif;
-
-  display: block;
-
-  /* position */
-  padding: 15px;
-  
-
-  width: 120px;
-  height: 35px;
-
-  color: rgb(79, 135, 238);
-
-  text-decoration: none;
-  font-size: 35px;
-}
-
-.box{
-    /* position */
-    margin-top: 20px;
-
-    /* size */
-    width: 90%;
-    height: 800px;
-
-
-    /* property */
-    background-color: rgb(248, 248, 248);
-}
-
-.title{
-    
-    /* position */
-    margin-top: 10px;
-    text-align: center;
-    font-size: 30px;
-}
-</style>
+<style src="../../css/step1.css" scoped/>
