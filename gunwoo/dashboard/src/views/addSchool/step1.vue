@@ -43,20 +43,42 @@
         <!-- 전체 flex 끝 -->
 
        <div class="row-2 flex">
+         <!-- 이미지 섹션-->
             <div class="section-photos">
-              <!-- 사진 타이틀 -->
+              <!-- 사진 섹션 타이틀 -->
               <div class="photo-title">
                 <p>사진 | {{PhotoUploaded}}개 업로드 됨</p>
               </div>
-              <div class="photo-image">
-                <!-- <img :src="require('@/assets/' + photoImg)" alt="asdf"> -->
+              <!-- 사진 이미지들과 버튼들 flex로 -->
+              <div class="flex">
+                <!-- 사진 프리뷰 파트 -->
+                <div class="photo-image">
+                  <img :src="require('@/assets/' + photoImg)" alt="photoImg">
+                </div>
+                <!-- 사진 기능 버튼들 -->
+                  <div class="photo-function">
+                    <button class="btn-upload">업로드</button>
+                    <button class="btn-manage">목록 / 관리</button>
+                    <button class="btn-delete">Delete all</button>
+                  </div>
+                  <!-- 사진 기능 버튼들 끝 -->
+                </div>
+                <!--사진 이미지들과 버튼들 flex 끝 -->
+              </div>
+            
+
+          <!-- 학교 정보 입력 섹션-->
+            <div class="section-plus">
+              <!-- 플러스 정보 타이틀 -->
+              <div class="plus-title">
+                <p>학교 정보</p>
               </div>
 
 
             </div>
           </div>
 
-        <div class="btn-section">
+        <div class="section-btn">
           <button class="btn-danger">취소</button>
           <button class="btn-success">다음</button>
         </div>
@@ -71,8 +93,8 @@ export default {
     data(){
         return{
           // 학교 로고 이미지 
-          logoImg: 'upload-logo.png',
-          // photoImg: 'upload-photo.png',
+          logoImg: "upload-logo.png",
+          photoImg: 'upload-image.png',
 
           // 사진 업로드 개수
           PhotoUploaded: 0
