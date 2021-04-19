@@ -14,6 +14,12 @@
         <div class="flex">
           <div class="row-1 flex">
             section1
+            <div class="section-logo">
+              <img :src="require('@/assets/' + logoImg)" alt="img-upload">
+            </div>
+            <div class="section-basic">
+
+            </div>
           </div>
          
             
@@ -27,8 +33,10 @@
             section2
           </div>
 
-        <button>취소</button>
-        <button>다음</button>
+        <div class="btn-section">
+          <button class="btn-danger">취소</button>
+          <button class="btn-success">다음</button>
+        </div>
   </div>
   <!-- 메인 박스 끝 -->
 </div>
@@ -39,7 +47,7 @@
 export default {
     data(){
         return{
-            
+            logoImg: 'upload-logo.png',
         }
     }    
 }
