@@ -308,6 +308,18 @@
     background-color: rgb(216, 216, 216);
 }
 
+.input{
+  width: 65%;
+  height: 45px;
+
+  /* 인풋 / 글씨 간격 조정 */
+  margin-top: -10px;
+
+  border: 0.8px solid rgb(202, 202, 202) ;
+  border-radius: 10px;
+}
+
+
 
 .section-btn{
   float: right;

@@ -74,6 +74,7 @@
                 <p>학교 정보</p>
               </div>
 
+              <input class="input" type="text">
 
             </div>
           </div>
@@ -93,11 +94,17 @@ export default {
     data(){
         return{
           // 학교 로고 이미지 
-          logoImg: "upload-logo.png",
-          photoImg: 'upload-image.png',
+          logoImg: "upload-logo.png",  //학교 심볼
+          photoImg: 'upload-image.png',//학교 사진
 
           // 사진 업로드 개수
-          PhotoUploaded: 0
+          PhotoUploaded: 0,
+
+          step1:{
+            schoolName: '',
+            schoolAddress: '',
+
+          }
         }
     }    
 }
