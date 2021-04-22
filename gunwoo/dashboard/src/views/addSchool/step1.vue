@@ -1,7 +1,11 @@
 <template>
 <div>
   <nav-bar/>
-  
+  <div class="alert">
+    <p>모든 필드가 채워지지 않았어요</p>
+    {{ dsdd}}
+  </div>
+
   <!-- 메인박스 -->
   <div class="box">
     <div class="title">학교 추가하기</div>
@@ -22,13 +26,13 @@
               <!-- 학교이름 -->
               <div class="name">
                 <p>학교명 | Name </p>
-                <input type="text">
+                <input type="text" v-model="step1.schoolName">
                 <div class="verified"></div>
               </div>
               <!-- 주소 -->
               <div class="address">
                 <p>주소 | Adress</p>
-                <input type="text" disabled>
+                <input type="text" disabled v-model="step1.schoolAddress">
                 <button>검색</button>
               </div>
 
@@ -73,15 +77,30 @@
               <div class="plus-title">
                 <p>학교 정보</p>
               </div>
+              <p>재학 기간</p>
+              <input class="input" type="text" v-model="step1.enrollPeriod">
 
-              <input class="input" type="text">
+              <p>캠퍼스</p>
+             <select class="select" 
+                     name="area" 
+                     v-model="step1.campusArea" 
+                     >
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
 
+            <input class="input wd-40" 
+                   type="text"
+                   v-model="step1.campusLocation">
+                  
             </div>
           </div>
 
         <div class="section-btn">
-          <button class="btn-danger">취소</button>
-          <button class="btn-success">다음</button>
+          <button class="btn-danger" @click="Cancel">취소</button>
+          <button class="btn-success" @click="Next">다음</button>
         </div>
   </div>
   <!-- 메인 박스 끝 -->
@@ -89,7 +108,10 @@
 </template>
 
 <script>
-// import $ from 'jquery'
+import $ from 'jquery'
+//loading KakaoMap API
+
+
 export default {
     data(){
         return{
@@ -100,13 +122,44 @@ export default {
           // 사진 업로드 개수
           PhotoUploaded: 0,
 
+          //step1 정보
           step1:{
             schoolName: '',
             schoolAddress: '',
-
+            enrollPeriod: '',
+            campusArea: '',
+            campusLocation: '',
           }
+
+
+
         }
+    },
+    methods:{
+      
+      //Address Popup
+
+
+
+      // STEPS
+      Next(){
+        console.log(this.step1);
+
+        // if({ } = this.step1)
+        $('.alert').slideDown(500)
+            setTimeout( function(){
+               $('.alert').stop().slideUp(500)
+            }, 1000) 
+        
+      },
+      Cancel(){
+
+      }
+
+
     }    
+
+
 }
 </script>
 
