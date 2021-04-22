@@ -1,7 +1,7 @@
 <template>
 <div>
   <nav-bar/>
-
+  
   <!-- 메인박스 -->
   <div class="box">
     <div class="title">학교 추가하기</div>
@@ -103,4 +103,10 @@ export default {
 }
 </script>
 
-<style src="../../css/step1.css" scoped/>
+
+<style scoped> 
+@import url('../../css/step1/step1.css');
+@import url('../../css/step1/button.css');
+</style>
+
+
