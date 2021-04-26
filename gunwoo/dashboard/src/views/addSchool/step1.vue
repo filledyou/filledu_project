@@ -3,7 +3,7 @@
   <nav-bar/>
   <div class="alert">
     <p>모든 필드가 채워지지 않았어요</p>
-    {{ dsdd}}
+    
   </div>
 
   <!-- 메인박스 -->
@@ -124,11 +124,11 @@ export default {
 
           //step1 정보
           step1:{
-            schoolName: '',
-            schoolAddress: '',
-            enrollPeriod: '',
-            campusArea: '',
-            campusLocation: '',
+            schoolName: 'ㅁㅇㄴㄹ',
+            schoolAddress: 'ㅁㅇㄴㄹ',
+            enrollPeriod: 'ㅁㄴㅇㄹ',
+            campusArea: 'ㅁㅇㄹ',
+            campusLocation: 'ㅁㅇㄹㄴ',
           }
 
 
@@ -139,23 +139,56 @@ export default {
       
       //Address Popup
 
-
-
-      // STEPS
+      // If Next button Pressed
       Next(){
-        console.log(this.step1);
+        const {schoolName, schoolAddress, enrollPeriod, campusArea, campusLocation} = this.step1;
 
-        // if({ } = this.step1)
+        ( schoolName == "" ||
+          schoolAddress == "" ||
+          enrollPeriod == "" ||
+          campusArea == "" ||
+          campusLocation == ""
+        ) ? this.fieldIsEmpty() : this.fieldIsFulfilled()
+      },
+
+      //If field is Empty
+      fieldIsEmpty(){
         $('.alert').slideDown(500)
             setTimeout( function(){
                $('.alert').stop().slideUp(500)
-            }, 1000) 
+            }, 1000)
+            console.log("모든 필드를 채워주세요");
+       },
+      //If field is Full
+      fieldIsFulfilled(){
+        console.log("모든 필드가 채워졌네요!");
+        //Vuex 접근을 위한 this.$store를 비구조화 할당은 안함
+        // const {state} = this.$store;
+        //state.step1 까지 접근하기 어려워서 state.step1을 VuexStep1 변수에 할당
+        const VuexStep1 = this.$store.state.Step1;
+
+      
         
-      },
+        //Vuex에 값 저장
+        // this.$store.state.step1.schoolName
+        VuexStep1.schoolName = this.step1.schoolName,
+        VuexStep1.schoolAddress = this.step1.schoolAddress,
+        VuexStep1.enrollPeriod = this.step1.enrollPeriod,
+        VuexStep1.campusArea = this.step1.campusArea,
+        VuexStep1.campusLocation = this.step1.campusLocation
+        console.log("Vuex 저장 완료");
+        },
+
+
+
+
       Cancel(){
+        //canel funtion
+      },
 
-      }
+      
 
+      
 
     }    
 

@@ -5,7 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    Token:''
+    Token:'',
+
+    Step1: {
+      schoolName: '',
+      schoolAddress: '',
+      enrollPeriod: '',
+      campusArea : '',
+      campusLocation: ''
+    }
+
   },
   mutations: {
   },
