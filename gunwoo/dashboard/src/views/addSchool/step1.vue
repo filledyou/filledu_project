@@ -142,12 +142,12 @@ export default {
       // If Next button Pressed
       Next(){
         const {schoolName, schoolAddress, enrollPeriod, campusArea, campusLocation} = this.step1;
-
-        ( schoolName == "" ||
-          schoolAddress == "" ||
-          enrollPeriod == "" ||
-          campusArea == "" ||
-          campusLocation == ""
+          //삼항 연사자를 이용한 계산, 한칸 띄어쓰기 까지 못 쓰게
+        ( schoolName == ""    || schoolName == " "    ||
+          schoolAddress == "" || schoolAddress == " " ||
+          enrollPeriod == ""  || enrollPeriod == " "  ||
+          campusArea == ""    || campusArea == " "    || 
+          campusLocation == ""|| campusLocation == " "
         ) ? this.fieldIsEmpty() : this.fieldIsFulfilled()
       },
 
@@ -167,7 +167,6 @@ export default {
         //state.step1 까지 접근하기 어려워서 state.step1을 VuexStep1 변수에 할당
         const VuexStep1 = this.$store.state.Step1;
 
-      
         
         //Vuex에 값 저장
         // this.$store.state.step1.schoolName
