@@ -167,7 +167,6 @@ export default {
         //state.step1 까지 접근하기 어려워서 state.step1을 VuexStep1 변수에 할당
         const VuexStep1 = this.$store.state.Step1;
 
-        
         //Vuex에 값 저장
         // this.$store.state.step1.schoolName
         VuexStep1.schoolName = this.step1.schoolName,
@@ -177,8 +176,6 @@ export default {
         VuexStep1.campusLocation = this.step1.campusLocation
         console.log("Vuex 저장 완료");
         },
-
-
 
 
       Cancel(){

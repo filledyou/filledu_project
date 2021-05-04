@@ -297,7 +297,7 @@
 
 .preview{
     position: absolute;
-
+    overflow: hidden;
     width: 22.5%;
     height: 680px;
 
