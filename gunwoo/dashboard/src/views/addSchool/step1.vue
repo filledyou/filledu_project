@@ -131,8 +131,6 @@ export default {
             campusLocation: 'ㅁㅇㄹㄴ',
           }
 
-
-
         }
     },
     methods:{
@@ -187,8 +185,6 @@ export default {
       
 
     }    
-
-
 }
 </script>
 
